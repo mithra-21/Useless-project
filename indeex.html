@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fictional Character Finder</title>
+  <style>
+    body { font-family: Arial; background: #f0f0f0; padding: 20px; }
+    h1 { color: darkblue; }
+    .card { background: white; padding: 15px; margin: 10px 0; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    button { padding: 8px 12px; margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+  <h1>🧙‍♂️ Fictional Character Finder</h1>
+  <div id="characters"></div>
+
+  <script>
+    fetch('characters.json')
+      .then(response => {
+        if (!response.ok) throw new Error('Fetch failed');
+        return response.json();
+      })
+      .then(data => {
+        console.log("✅ Loaded data:", data);  // 👈 Debug log
+        const container = document.getElementById('characters');
+        data.forEach(char => {
+          const div = document.createElement('div');
+          div.className = 'card';
+          div.innerHTML = `
+            <h2>${char.name}</h2>
+            <p><strong>Location:</strong> ${char.location}</p>
+            <a href="${char.map_url}" target="_blank">
+              <button>🔍 Find</button>
+            </a>
+          `;
+          container.appendChild(div);
+        });
+      })
+      .catch(error => {
+        console.error("❌ Error loading characters:", error);  // 👈 Error log
+        document.getElementById('characters').innerHTML =
+          "<p style='color:red;'>Failed to load characters. Try using Live Server or Python server.</p>";
+      });
+  </script>
+
+</body>
+</html>

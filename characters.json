@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Sherlock Holmes",
+    "location": "221B Baker Street, London",
+    "map_url": "https://maps.google.com/?q=221B+Baker+Street+London"
+  },
+  {
+    "name": "Batman",
+    "location": "Gotham City",
+    "map_url": "https://maps.google.com/?q=Gotham+City"
+  },
+  {
+    "name": "Harry Potter",
+    "location": "Hogwarts Castle, Scotland",
+    "map_url": "https://maps.google.com/?q=Alnwick+Castle+Scotland"
+  },
+  {
+    "name": "Naruto Uzumaki",
+    "location": "Hidden Leaf Village, Japan",
+    "map_url": "https://maps.google.com/?q=Naruto+Park+Awaji+Japan"
+  },
+  {
+    "name": "Luffy",
+    "location": "East Blue Sea, Japan",
+    "map_url": "https://maps.google.com/?q=Awaji+Island+Japan"
+  },
+  {
+    "name": "Goku",
+    "location": "Mount Paozu, Japan",
+    "map_url": "https://maps.google.com/?q=Mount+Paozu+Japan"
+  },
+  {
+    "name": "Frodo Baggins",
+    "location": "The Shire, Middle-earth",
+    "map_url": "https://maps.google.com/?q=Matamata+New+Zealand"
+  },
+  {
+    "name": "Iron Man",
+    "location": "Malibu, California",
+    "map_url": "https://maps.google.com/?q=Malibu+California"
+  },
+  {
+    "name": "Spiderman",
+    "location": "Queens, New York City",
+    "map_url": "https://maps.google.com/?q=Queens+NYC"
+  },
+  {
+    "name": "Yakshi",
+    "location": "Wayanad Forest, Kerala",
+    "map_url": "https://maps.google.com/?q=Wayanad+Kerala"
+  },
+  {
+    "name": "Chhota Bheem",
+    "location": "Dholakpur, India",
+    "map_url": "https://maps.google.com/?q=Hampi+Karnataka"
+  },
+  {
+    "name": "Light Yagami",
+    "location": "Tokyo, Japan",
+    "map_url": "https://maps.google.com/?q=Tokyo+Japan"
+  },
+  {
+    "name": "Doraemon",
+    "location": "Nobita's House, Tokyo",
+    "map_url": "https://maps.google.com/?q=Tokyo+Japan"
+  },
+  {
+    "name": "Elsa",
+    "location": "Arendelle, Norway",
+    "map_url": "https://maps.google.com/?q=Geirangerfjord+Norway"
+  },
+  {
+    "name": "Ben 10",
+    "location": "Bellwood, USA",
+    "map_url": "https://maps.google.com/?q=Bellwood+Nebraska"
+  },
+  {
+    "name": "Rick Sanchez",
+    "location": "Dimension C-137 Garage, USA",
+    "map_url": "https://maps.google.com/?q=Seattle+Washington"
+  },
+  {
+    "name": "Moana",
+    "location": "Motunui Island, Polynesia",
+    "map_url": "https://maps.google.com/?q=Fiji+Island"
+  }
+]
