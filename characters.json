@@ -83,5 +83,56 @@
     "name": "Moana",
     "location": "Motunui Island, Polynesia",
     "map_url": "https://maps.google.com/?q=Fiji+Island"
+  },
+  {
+    "name": "Yakshi",
+    "location": "Wayanad Forest, Kerala",
+    "map_url": "https://maps.google.com/?q=Wayanad+Kerala"
+  },
+  {
+    "name": "Chudail",
+    "location": "Bhangarh Fort, Rajasthan",
+    "map_url": "https://maps.google.com/?q=Bhangarh+Fort+Rajasthan"
+  },
+  {
+    "name": "Pret Atma",
+    "location": "Kuldhara Village, Rajasthan",
+    "map_url": "https://maps.google.com/?q=Kuldhara+Rajasthan"
+  },
+  {
+    "name": "Betaal",
+    "location": "Ujjain Forest, Madhya Pradesh",
+    "map_url": "https://maps.google.com/?q=Ujjain+Forest"
+  },
+  {
+    "name": "Mohini",
+    "location": "Attappady Hills, Kerala",
+    "map_url": "https://maps.google.com/?q=Attappady+Kerala"
+  },
+  {
+    "name": "White Lady of Mussoorie",
+    "location": "Savoy Hotel, Mussoorie",
+    "map_url": "https://maps.google.com/?q=Savoy+Hotel+Mussoorie"
+  },
+  {
+    "name": "Kapre",
+    "location": "Philippines-inspired forest being (placed in Idukki)",
+    "map_url": "https://maps.google.com/?q=Idukki+Kerala"
+  },
+  {
+    "name": "Headless Horseman",
+    "location": "Sleepy Hollow, New York",
+    "map_url": "https://maps.google.com/?q=Sleepy+Hollow+New+York"
+  },
+  {
+    "name": "La Llorona",
+    "location": "Xochimilco Canals, Mexico",
+    "map_url": "https://maps.google.com/?q=Xochimilco+Mexico+City"
+  },
+  {
+    "name": "Pontianak",
+    "location": "Pontianak, Indonesia",
+    "map_url": "https://maps.google.com/?q=Pontianak+Indonesia"
   }
+
 ]

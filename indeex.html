@@ -1,46 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Fictional Character Finder</title>
+  <meta charset="UTF-8">
+  <title>Fictional & Supernatural Character Finder</title>
   <style>
-    body { font-family: Arial; background: #f0f0f0; padding: 20px; }
-    h1 { color: darkblue; }
-    .card { background: white; padding: 15px; margin: 10px 0; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    button { padding: 8px 12px; margin-top: 10px; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f3f3f3;
+      padding: 30px;
+      text-align: center;
+    }
+    select {
+      font-size: 16px;
+      padding: 10px;
+      width: 300px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      display: inline-block;
+    }
+    .button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: #0056b3;
+    }
   </style>
 </head>
 <body>
 
-  <h1>🧙‍♂️ Fictional Character Finder</h1>
-  <div id="characters"></div>
+  <h1>🔍 Find Your Fictional & Supernatural Character</h1>
+
+  <select id="characterSelect">
+    <option value="">-- Select a character --</option>
+  </select>
+
+  <div id="info" class="card" style="display: none;"></div>
 
   <script>
+    let characters = [];
+
+    // Load JSON data
     fetch('characters.json')
-      .then(response => {
-        if (!response.ok) throw new Error('Fetch failed');
-        return response.json();
-      })
+      .then(res => res.json())
       .then(data => {
-        console.log("✅ Loaded data:", data);  // 👈 Debug log
-        const container = document.getElementById('characters');
-        data.forEach(char => {
-          const div = document.createElement('div');
-          div.className = 'card';
-          div.innerHTML = `
-            <h2>${char.name}</h2>
-            <p><strong>Location:</strong> ${char.location}</p>
-            <a href="${char.map_url}" target="_blank">
-              <button>🔍 Find</button>
-            </a>
-          `;
-          container.appendChild(div);
+        characters = data;
+        const select = document.getElementById('characterSelect');
+        data.forEach((char, index) => {
+          const option = document.createElement('option');
+          option.value = index;
+          option.textContent = char.name;
+          select.appendChild(option);
         });
       })
-      .catch(error => {
-        console.error("❌ Error loading characters:", error);  // 👈 Error log
-        document.getElementById('characters').innerHTML =
-          "<p style='color:red;'>Failed to load characters. Try using Live Server or Python server.</p>";
+      .catch(err => {
+        alert("Failed to load character data.");
+        console.error(err);
       });
+
+    // Handle selection
+    document.getElementById('characterSelect').addEventListener('change', function () {
+      const selectedIndex = this.value;
+      const infoDiv = document.getElementById('info');
+
+      if (selectedIndex === "") {
+        infoDiv.style.display = 'none';
+        return;
+      }
+
+      const char = characters[selectedIndex];
+
+      infoDiv.innerHTML = `
+        <h2>${char.name}</h2>
+        <p><strong>Location:</strong> ${char.location}</p>
+        <a href="${char.map_url}" target="_blank">
+          <button class="button">🔍 Find</button>
+        </a>
+      `;
+      infoDiv.style.display = 'block';
+    });
   </script>
 
 </body>
