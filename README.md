@@ -1,4 +1,4 @@
-Whimsical Character Finder🎯
+Whimsical Character Finder
 
 Basic Details
 This is a fun and spooky web-based tool that lets you find the real-world locations of your favorite fictional, mythological, supernatural, and anime characters.Example-Sherlock Holmes in London to Yakshis in Wayanad to Batman in Gotham.
