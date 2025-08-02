@@ -5,24 +5,30 @@
   <title>Fictional & Supernatural Character Finder</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f3f3f3;
+      font-family: 'Georgia', serif;
+      background: url('spooky.jpeg') no-repeat center center fixed;
+      background-size: cover;
       padding: 30px;
       text-align: center;
+      color: #f5f5f5;
+      overflow: hidden;
     }
+
     select {
       font-size: 16px;
       padding: 10px;
       width: 300px;
     }
+
     .card {
-      background: white;
+      background: rgba(20, 20, 20, 0.8);
       padding: 20px;
       margin-top: 20px;
       border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
       display: inline-block;
     }
+
     .button {
       margin-top: 15px;
       padding: 10px 20px;
@@ -33,14 +39,39 @@
       border-radius: 5px;
       cursor: pointer;
     }
+
     .button:hover {
       background-color: #0056b3;
     }
+
+                                  .sparkle {
+                                position: fixed;
+                                width: 10px;
+                                height: 10px;
+                                background: cyan;
+                                border-radius: 50%;
+                                pointer-events: none;
+                                animation: fade 0.8s ease-out forwards;
+                                box-shadow: 0 0 10px cyan, 0 0 20px white;
+                              }
+
+                              @keyframes fade {
+                                to {
+                                  opacity: 0;
+                                  transform: scale(1.5);
+                                }
+                              }
+
+
+
   </style>
 </head>
 <body>
 
-  <h1>🔍 Find Your Fictional & Supernatural Character</h1>
+  <!-- Background Sound -->
+  <audio id="spookySound" src="spooky.mp3" loop></audio>
+
+  <h1>Find Your Whimsical Character</h1>
 
   <select id="characterSelect">
     <option value="">-- Select a character --</option>
@@ -85,12 +116,36 @@
         <h2>${char.name}</h2>
         <p><strong>Location:</strong> ${char.location}</p>
         <a href="${char.map_url}" target="_blank">
-          <button class="button">🔍 Find</button>
+          <button class="button">Find</button>
         </a>
       `;
       infoDiv.style.display = 'block';
     });
+
+  
+    
+  window.addEventListener('load', function () {
+  const audio = document.getElementById('spookySound');
+  audio.play().catch((err) => {
+    console.log("Sound won't autoplay until user clicks somewhere.");
+  });
+});
+
+    // Sparkle effect
+    document.addEventListener('mousemove', function (e) {
+      const sparkle = document.createElement('div');
+      sparkle.className = 'sparkle';
+      sparkle.style.left = `${e.pageX}px`;
+      sparkle.style.top = `${e.pageY}px`;
+      document.body.appendChild(sparkle);
+      setTimeout(() => {
+        sparkle.remove();
+      }, 800);
+    });
+
+    
   </script>
 
 </body>
 </html>
+
