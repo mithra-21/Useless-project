@@ -1,3 +1,5 @@
+<img width="3188" height="1202" alt="image" src="https://github.com/user-attachments/assets/cd8fee36-2a8b-4ea8-89ed-4205a077e476" />
+
 Whimsical Character Finder
 
 Basic Details: 
