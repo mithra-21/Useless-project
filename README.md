@@ -1,6 +1,6 @@
 Whimsical Character Finder
 
-Basic Details
+Basic Details: 
 This is a fun and spooky web-based tool that lets you find the real-world locations of your favorite fictional, mythological, supernatural, and anime characters.Example-Sherlock Holmes in London to Yakshis in Wayanad to Batman in Gotham.
 The website has Mystic background theme and ambient music, the site uses a dropdown interface to display character locations and even links to Google Maps for a simulated “live” tracking experience.
 
@@ -17,12 +17,11 @@ The Problem (that doesn't exist)
 we are unable to locate  the hiding  places of our idols or whimsical creatures in this real world.
 
 The Solution (that nobody asked for)
-we made an exclusive website for finding whimsical creatures and supernatural characters.
+we made an exclusive website for finding whimsical and supernatural characters.
 
 Technical Details
 Technologies/Components Used
 For Software:
-
 HTML, CSS, JavaScript
 None 
 Google Maps (by link)
